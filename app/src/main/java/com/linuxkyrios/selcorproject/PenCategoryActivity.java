@@ -23,5 +23,19 @@ public class PenCategoryActivity extends Activity {
         ListView listPens = (ListView) findViewById(R.id.list_pens);
         listPens.setAdapter(listAdapter);
 
+        //Creating listener object
+        AdapterView.OnItemClickListener itemClickListener = new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> listPens,
+                                    View itemView,
+                                    int position,
+                                    long id) {
+                // Transmitting clicked pen to PenActivity
+                Intent intent = new Intent(PenCategoryActivity.this, PenActivity.class);
+                intent.putExtra(PenActivity.EXTRA_PENID, (int) id);
+                startActivity(intent);
+            }
+        };
+        // assign listener object to list view
+        listPens.setOnItemClickListener(itemClickListener);
     }
 }
