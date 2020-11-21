@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">SelcorProject</string>
+    <string name="selcor_logo">Logo firmy Selcor</string>
+    <string-array name="options">
+        <item>Długopisy</item>
+        <item>Koperty</item>
+        <item>Papier ksero</item>
+    </string-array>
 </resources>
